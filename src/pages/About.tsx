@@ -839,7 +839,7 @@ const About = () => {
       </section>
 
       {/* Gallery */}
-      {/* <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -854,54 +854,16 @@ const About = () => {
               Meet Our Team
             </h2>
           </motion.div>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="flex justify-center">
             <img
-              src="/images/gallery/team1.jpg"
+              src="https://atcpl-files.s3.ap-south-1.amazonaws.com/Team/cio_team.jpg"
               alt="Team 1"
-              className="w-full h-64 object-cover rounded-lg shadow-md"
-            />
-            <img
-              src="/images/gallery/team2.jpg"
-              alt="Team 2"
-              className="w-full h-64 object-cover rounded-lg shadow-md"
-            />
-            <img
-              src="/images/gallery/team3.jpg"
-              alt="Team 3"
-              className="w-full h-64 object-cover rounded-lg shadow-md"
+              className="w-full max-w-4xl h-auto md:h-[500px] object-cover rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             />
           </div>
-          <div className="container mx-auto px-4 mt-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
 
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Our Journey
-              </h2>
-            </motion.div>
-            <div className="grid md:grid-cols-3 gap-4">
-              <img
-                src="/images/gallery/team1.jpg"
-                alt="Team 1"
-                className="w-full h-64 object-cover rounded-lg shadow-md"
-              />
-              <img
-                src="/images/gallery/team2.jpg"
-                alt="Team 2"
-                className="w-full h-64 object-cover rounded-lg shadow-md"
-              />
-              <img
-                src="/images/gallery/team3.jpg"
-                alt="Team 3"
-                className="w-full h-64 object-cover rounded-lg shadow-md"
-              />
-            </div></div>
         </div>
-      </section> */}
+      </section>
       <CTASection />
     </Layout>
   );

@@ -102,7 +102,7 @@ export function Navbar() {
                             "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 group relative",
                             location.pathname.startsWith("/solutions")
                               ? "text-accent bg-accent/10"
-                              : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                              : "text-muted-foreground hover:text-white hover:bg-primary"
                           )}
                         >
                           <span className="flex items-center gap-1">
@@ -132,19 +132,19 @@ export function Navbar() {
                             <DropdownMenuItem key={industry.href} asChild className="p-0">
                               <Link
                                 to={industry.href}
-                                className="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-all duration-300 group/item border border-transparent hover:border-blue-200"
+                                className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary transition-all duration-300 group/item border border-transparent hover:border-primary/20"
                               >
                                 {/* Icon */}
-                                <div className="p-2 rounded-lg bg-blue-50 text-blue-600 group-hover/item:bg-blue-100 group-hover/item:text-blue-700 transition-colors">
+                                <div className="p-2 rounded-lg bg-blue-50 text-blue-600 group-hover/item:bg-white/20 group-hover/item:text-white transition-colors">
                                   {industry.icon}
                                 </div>
 
                                 {/* Text */}
                                 <div className="flex-1">
-                                  <div className="font-semibold text-foreground group-hover/item:text-blue-700 transition-colors">
+                                  <div className="font-semibold text-foreground group-hover/item:text-white transition-colors">
                                     {industry.label}
                                   </div>
-                                  <div className="text-xs text-muted-foreground mt-1">
+                                  <div className="text-xs text-muted-foreground mt-1 group-hover/item:text-white/80 transition-colors">
                                     {industry.description}
                                   </div>
                                 </div>
@@ -180,7 +180,7 @@ export function Navbar() {
                       "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative group",
                       location.pathname === link.href
                         ? "text-accent bg-accent/10"
-                        : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                        : "text-muted-foreground hover:text-white hover:bg-primary"
                     )}
                   >
                     {link.name}
@@ -193,13 +193,13 @@ export function Navbar() {
                   </Link>
                 );
               })}
-               {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
-          
-            <Button variant="cta" size="default" asChild>
-              <Link to="/contact">Book a Demo</Link>
-            </Button>
-          </div>
+              {/* CTA Buttons */}
+              <div className="hidden lg:flex items-center gap-3">
+
+                <Button variant="cta" size="default" asChild>
+                  <Link to="/contact">Book a Demo</Link>
+                </Button>
+              </div>
             </div>
 
             {/* Mobile Toggle */}
@@ -285,12 +285,12 @@ export function Navbar() {
                                   <Button variant="cta" className="w-full mt-4" asChild>
                                     <Link to="/contact" onClick={closeMenu}>Get Custom Solution</Link>
                                   </Button>
-                         
+
                                 </div>
-                               
+
                               </motion.div>
                             )}
-                                           </AnimatePresence>
+                          </AnimatePresence>
                         </div>
                       );
                     }
@@ -312,13 +312,13 @@ export function Navbar() {
                     );
                   })}
                 </div>
-                  <div className="pt-4 flex flex-col gap-2">
-             
-                <Button variant="cta" className="w-full" asChild>
-                  <Link to="/contact" onClick={() => setIsOpen(false)}>Book a Demo</Link>
-                </Button>
-              </div>
-                     
+                <div className="pt-4 flex flex-col gap-2">
+
+                  <Button variant="cta" className="w-full" asChild>
+                    <Link to="/contact" onClick={() => setIsOpen(false)}>Book a Demo</Link>
+                  </Button>
+                </div>
+
               </div>
             </motion.div>
           </>

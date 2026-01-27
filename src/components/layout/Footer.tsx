@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from "lucide-react";
-import aarkayLogo from "@/assets/aarkay-logo.png";
 
 const footerLinks = {
   industries: [
@@ -45,11 +44,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-6">
+            <Link to="/" className="flex items-center gap-1 mb-2">
               <img
-                src={aarkayLogo}
+                src="https://atcpl-files.s3.ap-south-1.amazonaws.com/logo/footer_logo.png"
                 alt="Aarkay Techno Consultants"
-                className="h-12 w-auto px-0 "
+                className="h-36 w-auto px-0 "
               />
             </Link>
             <p className="text-primary-foreground/70 mb-6 max-w-sm">
